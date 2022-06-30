@@ -1,0 +1,43 @@
+.popAlert {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    animation: fadeIn .5s both;
+}
+
+.popAlert-body {
+    overflow: auto;
+    width: 600px;
+    padding: 20px;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    background-color: #FFF;
+}
+
+.popAlert[data-out='true'] {
+    animation: fadeOut .5s both;
+}
+
+.popAlert-message {
+	text-align: center;
+	font-size: 2em;
+	font-family: sans-serif;
+}
+
+/* Ouverture Modal */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fermeture Modal */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
